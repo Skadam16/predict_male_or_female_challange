@@ -4,7 +4,8 @@
 
 
 #Importing dependencies
-from sklearn import tree
+from sklearn import tree, svm
+from sklearn.linear_model.stochastic_gradient import SGDClassifier
 
 #Input data
 #[height, weight, shoe size] data
@@ -20,6 +21,23 @@ Y = ['male','female','female','female','male','male',
 classifier = tree.DecisionTreeClassifier()
 classifier = classifier.fit(X,Y)
 
+#Support Vector Machine Classifier
+classifier1 = svm.SVC()
+classifier1 = classifier1.fit(X,Y)
+
+#Stochastic Gradient Descent 
+clf = SGDClassifier()
+clf = clf.fit(X,Y)
+
 #Prediction step
+#prediction for decision Trees
 prediction = classifier.predict([[172,75,35]])
 print(prediction)
+
+#Prediction for Support Vector Machines
+prediction1 =classifier1.predict([[177,70,43]])
+print(prediction1)
+
+#Prediction for Stochastic Gradient Descent
+pred = clf.predict([[172,75,35]])
+print(pred)
