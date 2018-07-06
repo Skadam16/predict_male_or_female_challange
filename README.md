@@ -15,7 +15,8 @@ Install missing dependencies using pip
 
 Once you have your dependencies installed via pip, run the script in terminal via
 
-python demo.py
+python predict_male_or_female.py
+(I used Anaconda instead of using Sublime Text editor and terminal to run the code)
 
 ##Challenge
 
